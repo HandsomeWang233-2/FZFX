@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <script>
             name = "王斐"; 
 
@@ -54,14 +56,26 @@
                 pointer-events: none;
                 filter: invert(1) hue-rotate(180deg);
             }
-            #Dead_Picture {
-                position: absolute;
-                width: 35%;
-                min-width: 130px;
-                left: 50%;            
-                transform: translate(-60%, 120px); 
+			@media (orientation: portrait ){
+                #Dead_Picture {
+                    position: absolute;
+                    width: 70%;
+                    min-width: 130px;
+                    left: 50%;            
+                    transform: translate(-60%, 120px); 
                 
-            }
+                }
+			}
+			@media (orientation: landscape ){
+                #Dead_Picture {
+                    position: absolute;
+                    width: 35%;
+                    min-width: 130px;
+                    left: 50%;            
+                    transform: translate(-60%, 120px); 
+                
+                }
+			}
             .Dead_Picture_Light {
                 filter: grayscale(100%);
             }
